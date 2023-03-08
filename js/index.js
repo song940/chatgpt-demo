@@ -1,11 +1,10 @@
 import { ready } from 'https://lsong.org/scripts/dom.js';
 import { query } from 'https://lsong.org/scripts/query.js';
 import { parse } from 'https://lsong.org/scripts/marked.js';
+import { notify } from 'https://lsong.org/scripts/notification.js';
 import { OpenAI, Configuration } from 'https://lsong.org/openai.js/index.js';
 import { registerServiceWorker } from 'https://lsong.org/scripts/service-worker.js';
-import { h, render, useState, useEffect, useRef } from 'https://lsong.org/scripts/components/react.js';
-import { notify } from 'https://lsong.org/scripts/notification.js';
-
+import { h, render, useState, useEffect, useRef } from 'https://lsong.org/scripts/react/index.js';
 
 import 'https://lsong.org/js/application.js';
 
@@ -58,7 +57,7 @@ const Message = ({ message }) => {
 
 const App = () => {
   const [role, setRole] = useState('assistant');
-  const [prompts, setPrompts] = useState();
+  const [prompts, setPrompts] = useState('');
   const [messages, setMessages] = useState([]);
   useEffect(() => {
     const system = {
@@ -99,7 +98,7 @@ const App = () => {
         value: prompts,
         className: "input",
         placeholder: "Enter something...",
-        onChange: e => setPrompts(e.target.value)
+        onInput: e => setPrompts(e.target.value),
       }),
       h('button', { className: "button button-primary" }, "Send"),
     ]),

@@ -9,7 +9,7 @@ import { h, render, useState, useEffect, useRef } from 'https://lsong.org/script
 import 'https://lsong.org/js/application.js';
 
 const {
-  apiKey = ('sk-' + 'eS3LDuGuQLEiGRHaztjqT3BlbkFJvr58VfCSeGe8pLF8KbHp')
+  apiKey = ('sk-' + 'mFgbWOgjrV62S155UbaNT3BlbkFJLnYe7YMcaDiRYN9XzzLR')
 } = query;
 
 const configuration = new Configuration({

@@ -1,7 +1,7 @@
 {
   "name": "Light Speed",
   "short_name": "⚡️",
-  "description": "Open AI ChatGPT Demo",
+  "description": "ChatGPT Demo",
   "id": "?id=chatgpt",
   "start_url": ".",
   "display": "standalone",

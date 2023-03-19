@@ -4,10 +4,6 @@
 @import url(https://lsong.org/stylesheets/form.css);
 @import url(https://lsong.org/stylesheets/button.css);
 
-.container {
-  max-width: 800px;
-}
-
 .messages {
   padding: 0;
   list-style: none;
@@ -16,6 +12,15 @@
 
 .messages li {
   margin: 5px 0;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.message-role-user {
+  text-align: right;
 }
 
 .preview span {
@@ -31,7 +36,7 @@
 
 .preview pre {
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .copyright {

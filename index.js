@@ -8,7 +8,7 @@ import { h, render, useState, useEffect, useRef } from 'https://lsong.org/script
 
 import 'https://lsong.org/js/application.js';
 
-const DEFAULT_KEY = ('sk-' + 'mFgbWOgjrV62S155UbaNT3BlbkFJLnYe7YMcaDiRYN9XzzLR');
+const DEFAULT_KEY = ('sk-' + 'QuqqMy4KtZiEHOVx31kST3BlbkFJ4XfymQYSHHLwN37udrwc');
 
 const {
   q,
@@ -56,7 +56,6 @@ const Message = ({ message }) => {
     previewRef.current.innerHTML = parse(message.content);
   }, [previewRef, message]);
   return h('div', { className: `preview` }, [
-    // h('span', null, message.role),
     h('div', { ref: previewRef, className: `message-content` }),
   ]);
 };
@@ -95,7 +94,12 @@ const App = () => {
       messages,
     });
     console.log('response', response);
-    const { message } = response.choices[0];
+    const { choices, error } = response;
+    if (error) {
+      alert(error.message);
+      return
+    }
+    const { message } = choices[0];
     setMessages([...messages, message]);
     notify(document.title, {
       icon: `icon-x512.png`,

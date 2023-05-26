@@ -8,7 +8,7 @@ import { h, render, useState, useEffect, useRef } from 'https://lsong.org/script
 
 import 'https://lsong.org/js/application.js';
 
-const DEFAULT_KEY = ('sk-' + 'QuqqMy4KtZiEHOVx31kST3BlbkFJ4XfymQYSHHLwN37udrwc');
+const DEFAULT_KEY = ('sk-' + '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');
 
 const {
   q,

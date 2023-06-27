@@ -8,7 +8,7 @@ import { h, render, useState, useEffect, useRef } from 'https://lsong.org/script
 
 import 'https://lsong.org/js/application.js';
 
-const DEFAULT_KEY = ('sk-' + 'uH95TzWmsL8CbmFPusMvT3BlbkFJz60or94D1T84rnF1M83N');
+const DEFAULT_KEY = ('' + '');
 
 const {
   q,
@@ -17,7 +17,7 @@ const {
 } = query;
 
 const configuration = new Configuration({
-  api: "https://openai.lsong.org",
+  api: "https://oai.lsong.org/v1",
   apiKey: key,
 });
 

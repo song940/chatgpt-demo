@@ -3,12 +3,12 @@ import { query } from 'https://lsong.org/scripts/query.js';
 import { parse } from 'https://lsong.org/scripts/marked.js';
 import { notify } from 'https://lsong.org/scripts/notification.js';
 import { OpenAI, Configuration } from 'https://lsong.org/openai.js/index.js';
-import { registerServiceWorker } from 'https://lsong.org/scripts/service-worker.js';
+import { registerServiceWorker } from 'https://lsong.org/scripts/sw.js';
 import { h, render, useState, useEffect, useRef } from 'https://lsong.org/scripts/react/index.js';
 
 import 'https://lsong.org/js/application.js';
 
-const DEFAULT_KEY = ('' + '');
+const DEFAULT_KEY = ('c97f2b499aeb46eb' + 'be29aef5a2052906');
 
 const {
   q,
@@ -21,7 +21,8 @@ const configuration = new Configuration({
   apiKey: key,
 });
 
-const model = 'gpt-3.5-turbo';
+// const model = 'gpt-3.5-turbo';
+const model = 'gpt-4';
 const openai = new OpenAI(configuration);
 
 const roles = {

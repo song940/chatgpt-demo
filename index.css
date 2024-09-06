@@ -10,17 +10,12 @@
   font-family: system-ui, sans-serif;
 }
 
-.messages li {
+.messages > li {
   margin: 5px 0;
   overflow: hidden;
-  background-color: #eee;
   border-radius: 10px;
   padding: 0 15px;
   position: relative;
-}
-
-.message-role-user {
-  text-align: right;
 }
 
 .preview span {
@@ -43,4 +38,23 @@
   color: #666;
   margin-top: 10px;
   font-style: italic;
+}
+
+.message-role-system {
+  background-color: bisque;
+}
+
+.message-role-user {
+  text-align: right;
+  background-color: aliceblue;
+}
+
+.message-role-assistant {
+  background-color: #eee;
+}
+
+#models {
+  width: 30%;
+  min-width: 100px;
+  max-width: 300px;
 }

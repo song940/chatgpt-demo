@@ -17,6 +17,14 @@ export class OpenAI {
     };
   }
 
+  async getModels() {
+    const response = await fetch(`${this.config.api}/models`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json(); 
+    return data.data;
+  }
   async createCompletion({ model, prompt, maxTokens, temperature }) {
     const url = `${this.config.api}/engines/${model}/completions`;
     const data = {
